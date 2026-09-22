@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>threads-ai — Content analytics for Threads creators</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 44rem; margin: 0 auto; padding: 3rem 1.5rem 6rem; color: #1a1a1a;
+  }
+  @media (prefers-color-scheme: dark) { body { background: #111; color: #e8e8e8; } }
+  h1 { font-size: 1.9rem; margin-bottom: .3rem; letter-spacing: -.02em; }
+  .sub { color: #666; margin-top: 0; }
+  @media (prefers-color-scheme: dark) { .sub { color: #999; } }
+  h2 { font-size: 1.15rem; margin-top: 2.6rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .4rem 0; }
+  a { color: #0b6cf0; }
+  @media (prefers-color-scheme: dark) { a { color: #6ab0ff; } }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #ddd; font-size: .9rem; color: #666; }
+  @media (prefers-color-scheme: dark) { footer { border-color: #333; color: #999; } }
+  code { background: rgba(127,127,127,.15); padding: .1rem .35rem; border-radius: 4px; font-size: .9em; }
+</style>
+</head>
+<body>
+
+<h1>threads-ai</h1>
+<p class="sub">Content analytics and publishing assistant for Threads creators.</p>
+
+<h2>What it does</h2>
+<p>
+  threads-ai helps an individual creator understand what they publish on Threads and decide what to
+  publish next. It collects the creator's own posts and performance metrics over time, tracks which
+  topics and formats are currently gaining traction, and drafts candidate posts that the creator
+  reviews and approves before anything is published.
+</p>
+
+<h2>Features</h2>
+<ul>
+  <li><strong>Performance history</strong> — records views, likes, replies, reposts and quotes for each post as a time series, so early reach can be distinguished from final reach.</li>
+  <li><strong>Audience growth tracking</strong> — samples follower count on a schedule and attributes growth to individual posts.</li>
+  <li><strong>Topic discovery</strong> — searches public Threads content by keyword and topic tag to surface what is currently being discussed, so drafts stay relevant.</li>
+  <li><strong>Draft assistance</strong> — generates candidate posts grounded in the creator's own writing. Every draft requires explicit human approval before publishing.</li>
+  <li><strong>Reply management</strong> — surfaces replies and mentions worth responding to. Replies are written by the person, not automated.</li>
+</ul>
+
+<h2>Permissions used</h2>
+<ul>
+  <li><code>threads_basic</code> — read the user's own profile and posts.</li>
+  <li><code>threads_content_publish</code> — publish posts the user has approved.</li>
+  <li><code>threads_manage_insights</code> — read performance metrics for the user's own content.</li>
+  <li><code>threads_read_replies</code>, <code>threads_manage_replies</code> — read and respond to replies on the user's posts.</li>
+  <li><code>threads_manage_mentions</code> — surface public posts that mention the user.</li>
+  <li><code>threads_keyword_search</code> — search public Threads content by keyword and topic tag to identify trending subjects.</li>
+  <li><code>threads_profile_discovery</code> — look up public profiles and their public posts for topic research.</li>
+</ul>
+
+<h2>Data handling</h2>
+<p>
+  Data is stored locally on the user's own machine. It is not sold, shared with third parties, or used
+  for advertising. Content retrieved from the Threads API is used solely to produce analytics and
+  drafts for the authenticated user.
+</p>
+
+<footer>
+  <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="data-deletion.html">Data Deletion</a> &nbsp;·&nbsp;
+  Contact: <a href="mailto:jandoe3690@gmail.com">jandoe3690@gmail.com</a>
+</footer>
+
+</body>
+</html>
